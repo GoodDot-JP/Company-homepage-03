@@ -33,7 +33,8 @@
 
         <main>
             <div class="grid">
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (10).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -41,7 +42,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (1).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -49,7 +51,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (2).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -57,7 +60,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (3).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -65,7 +69,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (4).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -73,7 +78,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (5).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -81,7 +87,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (6).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -89,7 +96,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (7).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -97,7 +105,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (8).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -105,7 +114,8 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
-                <section class="card">
+                <section class="card" data-title="Article Title 1" data-summary="Summary of article"
+                    data-image="../image/VR.jpg">
                     <img class="card-img" src="../image/shadw (9).svg" alt="picture">
                     <div class="card-content">
                         <h1 class="card-title">ホームページを開設してました</h1>
@@ -113,6 +123,24 @@
                         <span class="date">2024/05/09</span>
                     </div>
                 </section>
+
+                <!-- モーダルの表示内容 -->
+                <!-- Modal Structure -->
+                <div id="modal" class="modal">
+                    <!-- モーダルの内容を格納する部分 -->
+                    <div id="modal-content" class="modal-content">
+                        <!-- モーダルを閉じるためのボタン -->
+                        <span id="modal-close" class="close">×</span>
+                        <!-- モーダルの内容を画像とテキストに分けて表示 -->
+                        <div class="modal-contentInnerTop"><img id="modal-image" src="" alt="Selected Thumbnail">
+                            <p id="modal-title"></p>
+                            <p id="modal-summary"></p>
+                        </div>
+                        <div class="modal-contentInnerBottom"><a id="modal-link"></a></div>
+                    </div>
+                    <!--モーダルが開いている間は画面の残りの部分を暗くする-->
+                    <div id="modal-overlay" class="modal-overlay"></div>
+                </div>
             </div>
         </main>
 
@@ -145,6 +173,7 @@
             </ul>
         </footer>
         <script src="../JS/app.js"></script>
+        <script src="../JS/news.js"></script>
     </body>
 
 </html>
