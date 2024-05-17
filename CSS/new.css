@@ -213,7 +213,7 @@ main {
   grid-template-columns: repeat(5, 1fr);
   gap: 32px;
 }
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1700px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -295,32 +295,70 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: none;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
   z-index: 10;
-  display: flex;
-  flex-direction: column;
-  max-width: 80%;
-  gap: 15px;
 }
 .modal .modal-content .modal-contentInnerTop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  height: 100%;
 }
-.modal .modal-content .modal-contentInnerTop img {
+.modal .modal-content .modal-contentInnerTop #modal-media {
+  grid-area: 2/1/6/4;
+}
+.modal .modal-content .modal-contentInnerTop #modal-media img {
+  display: block;
+  max-height: 100%;
+  width: auto;
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 16px;
+  padding: 8px;
+  margin: 0 auto;
+}
+.modal .modal-content .modal-contentInnerTop #modal-media video {
+  display: block;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+  padding: 8px;
+  border-radius: 16px;
+}
+.modal .modal-content .modal-contentInnerTop #modal-title {
+  grid-area: 1/1/2/6;
+  font-size: 72px;
+  padding: 8px;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .modal .modal-content .modal-contentInnerTop #modal-title {
+    font-size: 36px;
+  }
+}
+.modal .modal-content .modal-contentInnerTop #modal-summary {
+  grid-area: 2/4/6/6;
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 8px;
 }
 .modal .modal-content .modal-contentInnerBottom {
-  margin-top: 20px;
+  margin: 0;
 }
 .modal .modal-content .modal-contentInnerBottom a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
 }
 .modal .modal-content .close {
   position: absolute;

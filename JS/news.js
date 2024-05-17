@@ -12,9 +12,21 @@ document.addEventListener('DOMContentLoaded', function () {
             var currentCard = card;
             initialRect = currentCard.getBoundingClientRect();
 
-            document.getElementById('modal-image').src = currentCard.getAttribute('data-image');
+            var mediaType = currentCard.getAttribute('data-type');
+            var mediaElement;
+
+            if (mediaType === 'image') {
+                mediaElement = '<img id="modal-image" src="' + currentCard.getAttribute('data-image') + '" alt="Selected Thumbnail">';
+            } else if (mediaType === 'video') {
+                mediaElement = '<video id="modal-video" controls>';
+                mediaElement += '<source src="' + currentCard.getAttribute('data-video') + '" type="video/mp4">';
+                mediaElement += 'Your browser does not support the video tag.</video>';
+            }
+
+            // document.getElementById('modal-image').src = currentCard.getAttribute('data-image');
+            document.getElementById('modal-media').innerHTML = mediaElement;
             document.getElementById('modal-title').textContent = currentCard.getAttribute('data-title');
-            document.getElementById('modal-summary').textContent = currentCard.getAttribute('data-summary');
+            document.getElementById('modal-summary').innerHTML = currentCard.getAttribute('data-summary').replace(/\n/g, '<br>');
             document.getElementById('modal-link').href = currentCard.getAttribute('data-link');
 
             modalContent.style.position = 'fixed';
