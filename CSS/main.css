@@ -494,6 +494,24 @@ p {
   padding: 32px;
 }
 
+.service_button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #33cccc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.service_button:hover {
+  background-color: #26a69a;
+}
+
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                                         footer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*/
