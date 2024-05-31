@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
     <head>
         <meta charset="UTF-8">
@@ -32,29 +32,31 @@
         </header>
         <main>
             <div class="Form">
-                <div class="Form-Item">
-                    <p class="Form-Item-Label">
-                        <span class="Form-Item-Label-Required">必須</span>会社名
-                    </p>
-                    <input type="text" class="Form-Item-Input" placeholder="例）株式会社令和">
-                </div>
-                <div class="Form-Item">
-                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
-                    <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
-                </div>
-                <div class="Form-Item">
-                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
-                    <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
-                </div>
-                <div class="Form-Item">
-                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
-                    <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
-                </div>
-                <div class="Form-Item">
-                    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-                    <textarea class="Form-Item-Textarea"></textarea>
-                </div>
-                <div class="send"><a class="btn-slip" href="#">送信する</a></div>
+                <form action="../PHP/queue.php" method="POST">
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label">
+                            <span class="Form-Item-Label-Required">必須</span>会社名
+                        </p>
+                        <input type="text" name="company" class="Form-Item-Input" placeholder="例）株式会社令和">
+                    </div>
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                        <input type="text" name="name" class="Form-Item-Input" placeholder="例）山田太郎">
+                    </div>
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+                        <input type="text" name="phone" class="Form-Item-Input" placeholder="例）000-0000-0000">
+                    </div>
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                        <input type="email" name="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+                    </div>
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                        <textarea name="message" class="Form-Item-Textarea"></textarea>
+                    </div>
+                    <div class="send"><button type="submit" class="btn-slip">送信する</button></div>
+                </form>
             </div>
         </main>
         <footer class="footer">
@@ -69,17 +71,14 @@
                     <li class="icon"><a href="https://www.instagram.com/good_dot_point_cloud/" target="_blank"><img
                                 src="../image/Instagram_Glyph_White.png" alt="Instagram logo"></a></li>
                     <li class="icon"><a href="https://twitter.com/dot_good" target="_blank"><img
-                                src="../image/x_logo-white.png" alt="X logo"></a>
-                    </li>
+                                src="../image/x_logo-white.png" alt="X logo"></a></li>
                     <li class="icon"><a href="http://www.youtube.com/@GoodDot." target="_blank"><img
                                 src="../image/yt_icon_mono_dark.png" alt="Youtube logo"></a></li>
                 </ul>
             </div>
             <hr />
             <ul class="link-flex">
-                <li class="copyright">
-                    © 2024 GoodDot株式会社 POINT CLOUD DATA SERVICE
-                </li>
+                <li class="copyright">© 2024 GoodDot株式会社 POINT CLOUD DATA SERVICE</li>
                 <li class="link-tab"><a href="#">About</a></li>
                 <li class="link-tab"><a href="#">サイトマップ</a></li>
                 <li class="link-tab"><a href="../HTML/privacy.html" target="_blank">プライバシーポリシー</a></li>
